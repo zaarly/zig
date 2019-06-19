@@ -1,24 +1,9 @@
-# README
+# Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* `git clone git@github.com:zaarly/zig.git`
 
-Things you may want to cover:
+* `bundle install`
 
-* Ruby version
+* `rails server`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This should run at localhost:3000. I couldn't figure out how to get the JS to work.
