@@ -1,0 +1,1 @@
+!function(){var t=document.getElementById("layouts-grid-on-off"),e=document.getElementById("layouts");t.addEventListener("change",function(){e.classList.toggle("js-active")})}();
