@@ -3,3 +3,9 @@
 $color-gray: #eee;
 $color-gray-dark: #aaa;
 $color-gray-darker: #888;
+
+// breakpoint
+$bp-320: 20em; // iphone 5 and above
+$bp-768: 48em; // vertical tablet
+$bp-992: 62em; // horizontal tablet and small desktop
+$bp-1200: 75em; // medium desktop

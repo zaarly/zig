@@ -1,0 +1,49 @@
+@mixin bp($bp) {
+	@if $bp=='320' {
+		@media(min-width:#{$bp-320}) {
+			@content
+		}
+	}
+
+	@elseif $bp=='sub-320' {
+		@media(max-width:(#{$bp-375}-0.0625em)) {
+			@content
+		}
+	}
+
+	@elseif $bp==768 {
+		@media(min-width:#{$bp-768}) {
+			@content
+		}
+	}
+
+	@elseif $bp=='sub-768' {
+		@media(max-width:#{$bp-768 - 0.0625}) {
+			@content
+		}
+	}
+
+	@elseif $bp==992 {
+		@media(min-width:#{$bp-992}) {
+			@content
+		}
+	}
+
+	@elseif $bp=='sub-992' {
+		@media(max-width:#{$bp-992 - 0.0625}) {
+			@content
+		}
+	}
+
+	@elseif $bp==1200 {
+		@media(min-width:#{$bp-1200}) {
+			@content
+		}
+	}
+
+	@elseif $bp=='sub-1200' {
+		@media(max-width:#{$bp-1200 - 0.0625}) {
+			@content
+		}
+	}
+}
