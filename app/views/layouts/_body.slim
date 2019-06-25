@@ -1,51 +1,23 @@
-body
-  header
-    h1 Zaarly Interface Guide
-  main.v1
-    section#layouts.layouts
-      header.layouts__header
-        h2 Layouts
-        .layouts__grid-controls
-          label for="layouts-grid-on-off"  Show Grids
-          input#layouts-grid-on-off.layouts__header-grid-control type="checkbox" 
-      article data-component="layout-3-6-3" 
-        header
-          h3 Layout 3-6-3
-        section.container.container--3-6-3
-          nav.site-nav
-          section.site-content
-          aside.site-sidebar
-          .layouts__grid
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-      article data-component="layout-3-4-5" 
-        header
-          h3 Layout 3-4-5
-        section.container.container--3-4-5
-          nav.site-nav
-          section.site-content
-          aside.site-sidebar
-          .layouts__grid
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
+body	
+	/ Main
+	main.v1	
+		/ demo
+		/ header.layouts__header
+		/ 	h2 Layouts
+		/   	.layouts__grid-controls
+		/ 	label for="layouts-grid-on-off"  Show Grids
+		/ 	input#layouts-grid-on-off.layouts__header-grid-control type="checkbox" 
+
+  		.site-layout.site-layout--standard
+			nav.site-nav
+				h3 Site Nav
+			section.site-content-wrapper
+				header.site-header
+					h3 Site Header
+				section.site-content
+					h3 Site Content
+				aside.site-sidebar
+					h3 Site Sidebar
+
+/! main js
 = render "application/javascript"

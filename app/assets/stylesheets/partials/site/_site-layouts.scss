@@ -1,0 +1,10 @@
+.site-layout {
+	display: grid;
+
+	&--standard {
+		min-height: 100vh;
+		grid-template-columns: 18.75rem 1fr;
+		grid-template-areas: "site-nav site-content-wrapper site-sidebar";
+
+	}
+}

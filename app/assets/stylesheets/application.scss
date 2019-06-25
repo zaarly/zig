@@ -9,11 +9,11 @@ Project Specific
 @import "partials/global/variables";
 @import "partials/global/normalize";
 
-// layout
-@import "partials/layout/container";
-
 // site
+@import "partials/site/site-layouts";
 @import "partials/site/site-nav";
+@import "partials/site/site-content-wrapper";
+@import "partials/site/site-header";
 @import "partials/site/site-content";
 @import "partials/site/site-sidebar";
 
