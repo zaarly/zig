@@ -1,19 +1,7 @@
 // site
-
 .site {
-
-	&-nav,
-	&-content,
-	&-header,
-	&-sidebar {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		box-shadow: inset 0 0 0 2px #000;
-	}
-
 	&-nav {
-		background: $color-gray-darker;
+		background: #555;
 	}
 
 	&-content {
@@ -21,7 +9,7 @@
 	}
 
 	&-header {
-		background: $color-gray-dark;
+		// background: $color-gray-dark;
 	}
 
 	&-sidebar {

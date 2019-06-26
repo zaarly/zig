@@ -9,18 +9,31 @@ body
 		/ 	label for="layouts-grid-on-off"  Show Grids
 		/ 	input#layouts-grid-on-off.layouts__header-grid-control type="checkbox" 
 
-  		.site-layout.site-layout--standard
-			nav.site-nav
-				h3 Site Nav
+  		#site-layout.site-layout.site-layout--standard
+			nav#site-nav.site-nav
+				header.site-nav__header
+					button#site-nav-close.site-nav__close.button.button--primary.button--icon.button--round[title="Close Main Menu" aria-controls="site-nav"]
+						span.accessible-hide Close Main Menu
+						svg[aria-hidden="true" role="img"]
+							use[xlink:href="#svg-close"]
+				h3 Site Navigation
 			section.site-content-wrapper
 				header.site-header
-					.site-header__
+					button#site-nav-open.site-nav__open.button.button--primary.button--icon.button--round[title="Main Menu" aria-controls="site-nav"]
+						span.accessible-hide Main Menu
+						svg[aria-hidden="true" role="img"]
+							use[xlink:href="#svg-hamburger"]
+					.site-header__branding-wrapper
+						a.site-header__branding[href="#0"]
+							svg[aria-hidden="true" role="img"]
+								use[xlink:href="#svg-zaarly-logo"]
 					h1.site-header__h1 Pet-Friendly Cleaning Services
-					h2.site-header__h1 The best 3 Businesses for “Pet Friendly Cleaning”
+					h2.site-header__h2 The best 3 Businesses for “Pet Friendly Cleaning”
 				section.site-content
 					h3 Site Content
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque quisquam facere, numquam voluptas doloremque, magnam molestiae repellat eveniet beatae animi, quis perferendis excepturi eos vero accusamus, earum iusto nam.
 				aside.site-sidebar
 					h3 Site Sidebar
-
-/! main js
-= render "application/javascript"
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque quisquam facere, numquam voluptas doloremque, magnam molestiae repellat eveniet beatae animi, quis perferendis excepturi eos vero accusamus, earum iusto nam.
+	/! main js
+	= render "application/javascript"

@@ -1,3 +1,7 @@
 .site-sidebar {
-	grid-area: site-sidebar
+	padding: 1rem;
+
+	@include bp(768) {
+		grid-area: site-sidebar
+	}
 }
