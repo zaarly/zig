@@ -4,8 +4,9 @@
 
 * `bundle install`
 
-* `rails server`
+* `gem install foreman`
 
-* 'foreman start'
+* `foreman start`
 
-This should run at localhost:3000. I couldn't figure out how to get the JS to work.
+This should run at localhost:5000. To change to another port, use `foreman start -p 3000`.
+
