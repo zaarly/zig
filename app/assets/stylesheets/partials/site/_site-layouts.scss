@@ -1,18 +1,15 @@
+/* =============== Base =============== */
 .site-layout {
-	@include bp(1200) {
+
+	// standard layout – no modifier
+	@include bp(992) {
 		display: grid;
+		grid-template-columns: 1fr 18.75rem;
+		grid-template-areas: "site-content-wrapper site-sidebar"
 	}
 
-	&--standard {
-
-		// STATE - SITE NAV OPEN, parent class applied here
-		&.js-site-nav-active {
-			overflow-x: hidden;
-		}
-
-		@include bp(1200) {
-			grid-template-columns: 18.75rem 1fr;
-			grid-template-areas: "site-nav site-content-wrapper";
-		}
+	@include bp(1200) {
+		grid-template-columns: 18.75rem 1fr 18.75rem;
+		grid-template-areas: "site-nav site-content-wrapper site-sidebar"
 	}
 }

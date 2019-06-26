@@ -1,26 +1,25 @@
 /* ===========================
 
-Project Specific
+ZIG
 
 =========================== */
-// imports here...
 
-// global
+// global first
 @import "partials/global/variables";
 @import "partials/global/mixins";
 @import "partials/global/normalize";
 @import "partials/global/resets";
 @import "partials/global/helper-classes";
 
-// site
+// site layouts
 @import "partials/site/site-layouts";
 @import "partials/site/site-nav";
 @import "partials/site/site-content-wrapper";
-@import "partials/site/site-header";
 @import "partials/site/site-content";
+@import "partials/site/site-content-header";
 @import "partials/site/site-sidebar";
 
-// demo
+// demo only
 @import "partials/demo/demo";
 
 // Boilerplate Print Styles -- LAST

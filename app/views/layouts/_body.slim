@@ -1,39 +1,92 @@
-body	
+body.zig--v1
 	= render "layouts/zaarly-svg-spritesheet"
 	/ Main
-	main.v1	
-		/ demo
-		/ header.layouts__header
-		/ 	h2 Layouts
-		/   	.layouts__grid-controls
-		/ 	label for="layouts-grid-on-off"  Show Grids
-		/ 	input#layouts-grid-on-off.layouts__header-grid-control type="checkbox" 
-
-  		#site-layout.site-layout.site-layout--standard
+	main
+  		#site-layout.site-layout
+  			/ SITE NAV
 			nav#site-nav.site-nav
 				header.site-nav__header
-					button#site-nav-close.site-nav__close.button.button--primary.button--icon.button--round[title="Close Main Menu" aria-controls="site-nav"]
+					button#site-nav-mobile-menu-closer.site-nav__mobile-menu-closer.button.button--primary.button--icon.button--round[title="Close Main Menu" aria-controls="site-nav"]
 						span.accessible-hide Close Main Menu
 						svg[aria-hidden="true" role="img"]
 							use[xlink:href="#svg-close"]
+					.site-nav__branding-wrapper
+						a.site-nav__branding[href="#0"]
+							svg[aria-hidden="true" role="img"]
+								use[xlink:href="#svg-zaarly-logo"]
 				h3 Site Navigation
-			section.site-content-wrapper
-				header.site-header
-					button#site-nav-open.site-nav__open.button.button--primary.button--icon.button--round[title="Main Menu" aria-controls="site-nav"]
+				ul
+					li Nav Item
+					li Nav Item
+					li Nav Item
+					li Nav Item
+					li Nav Item
+					li Nav Item
+					li Nav Item
+
+			/ SITE CONTENT HEADER
+			.site-content-wrapper
+				header.site-content-header
+					button#site-header-mobile-menu-opener.site-content-header__mobile-menu-opener.button.button--primary.button--icon.button--round[title="Main Menu" aria-controls="site-nav"]
 						span.accessible-hide Main Menu
 						svg[aria-hidden="true" role="img"]
 							use[xlink:href="#svg-hamburger"]
-					.site-header__branding-wrapper
-						a.site-header__branding[href="#0"]
+					.site-content-header__branding-wrapper
+						a.site-content-header__branding[href="#0"]
 							svg[aria-hidden="true" role="img"]
 								use[xlink:href="#svg-zaarly-logo"]
-					h1.site-header__h1 Pet-Friendly Cleaning Services
-					h2.site-header__h2 The best 3 Businesses for “Pet Friendly Cleaning”
+					h1.site-content-header__h1 Pet-Friendly Cleaning Services
+					h2.site-content-header__h2 The best 3 Businesses for “Pet Friendly Cleaning”
+
+				/ SITE CONTENT INNER	
 				section.site-content
 					h3 Site Content
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque quisquam facere, numquam voluptas doloremque, magnam molestiae repellat eveniet beatae animi, quis perferendis excepturi eos vero accusamus, earum iusto nam.
-				aside.site-sidebar
+					p The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing), or other improvements to the property (i.e. garden work or garage maintenance/additions).
+
+					p While "home improvement" often refers to building projects that alter the structure of an existing home, it can also include improvements to lawns, gardens, and outdoor structures, such as gazebos and garages.  It also encompasses maintenance, repair, and general servicing tasks. Home improvement projects generally have one or more of the following goals:
+
+					p Home or residential renovation is an almost $300 billion industry in the United States, The average cost per project is $3,000 in the United States and $11,000–15,000 in Canada.
+
+					p Professional home improvement is ancient and goes back to the beginning of recorded civilization. One example is Sergius Orata, who in the 1st century B.C. is said by the writer Vitruvius (in his famous book De architectura) to have invented the hypocaust. The hypocaust is an underfloor heating system that was used throughout the Roman empire in villas of the wealthy. He is said to have become wealthy himself by buying villas at a low price, adding spas and his newly invented hypocaust, and reselling them at higher prices.
+
+					p Perhaps the most important or visible professionals in the renovation industry are renovation contractors or skilled trades.  These are the builders that have specialized credentials, licensing and experience to perform renovation services in specific municipalities.
+
+					p While there is a fairly large ‘grey market’ of unlicensed companies, there are those that have membership in a reputable association and/or are accredited by a professional organization. Homeowners are recommended to perform checks such as verifying license and insurance and checking business references prior to hiring a contractor to work on their house.
+
+					p Home improvement was popularized on television in 1979 with the premiere of This Old House starring Bob Vila on PBS.
+					American cable channel HGTV features many do-it-yourself shows, as does sister channel DIY Network.Danny Lipford hosts and produces the nationally syndicated Today's Homeowner with Danny Lipford.
+					Tom Kraeutler and Leslie Segrete co-host the nationally syndicated The Money Pit Home Improvement Radio Show.
+
+					p Movies that poked fun at the difficulties involved include: Mr. Blandings Builds His Dream House (1948), starring Cary Grant and Myrna Loy; George Washington Slept Here (1942), featuring Jack Benny and Ann Sheridan; and The Money Pit (1986), with Tom Hanks and Shelley Long.
+					The sitcom Home Improvement used the home improvement theme for comedic purposes.
+
+					p The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing), or other improvements to the property (i.e. garden work or garage maintenance/additions).
+
+					p While "home improvement" often refers to building projects that alter the structure of an existing home, it can also include improvements to lawns, gardens, and outdoor structures, such as gazebos and garages.  It also encompasses maintenance, repair, and general servicing tasks. Home improvement projects generally have one or more of the following goals:
+
+					p Home or residential renovation is an almost $300 billion industry in the United States, The average cost per project is $3,000 in the United States and $11,000–15,000 in Canada.
+
+					p Professional home improvement is ancient and goes back to the beginning of recorded civilization. One example is Sergius Orata, who in the 1st century B.C. is said by the writer Vitruvius (in his famous book De architectura) to have invented the hypocaust. The hypocaust is an underfloor heating system that was used throughout the Roman empire in villas of the wealthy. He is said to have become wealthy himself by buying villas at a low price, adding spas and his newly invented hypocaust, and reselling them at higher prices.
+			/ SITE SIDEBAR
+			aside.site-sidebar
+				div
 					h3 Site Sidebar
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque quisquam facere, numquam voluptas doloremque, magnam molestiae repellat eveniet beatae animi, quis perferendis excepturi eos vero accusamus, earum iusto nam.
+					p Perhaps the most important or visible professionals in the renovation industry are renovation contractors or skilled trades.  These are the builders that have specialized credentials, licensing and experience to perform renovation services in specific municipalities.
+
+					p While there is a fairly large ‘grey market’ of unlicensed companies, there are those that have membership in a reputable association and/or are accredited by a professional organization. Homeowners are recommended to perform checks such as verifying license and insurance and checking business references prior to hiring a contractor to work on their house.
+
+					p Home improvement was popularized on television in 1979 with the premiere of This Old House starring Bob Vila on PBS.
+					American cable channel HGTV features many do-it-yourself shows, as does sister channel DIY Network.Danny Lipford hosts and produces the nationally syndicated Today's Homeowner with Danny Lipford.
+					Tom Kraeutler and Leslie Segrete co-host the nationally syndicated The Money Pit Home Improvement Radio Show.
+
+					p Movies that poked fun at the difficulties involved include: Mr. Blandings Builds His Dream House (1948), starring Cary Grant and Myrna Loy; George Washington Slept Here (1942), featuring Jack Benny and Ann Sheridan; and The Money Pit (1986), with Tom Hanks and Shelley Long.
+					The sitcom Home Improvement used the home improvement theme for comedic purposes.
+
+					p The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing), or other improvements to the property (i.e. garden work or garage maintenance/additions).
+
+					p While "home improvement" often refers to building projects that alter the structure of an existing home, it can also include improvements to lawns, gardens, and outdoor structures, such as gazebos and garages.  It also encompasses maintenance, repair, and general servicing tasks. Home improvement projects generally have one or more of the following goals:
+			/ SITE CONTENT WRAPPER
+			/ section.site-content-wrapper
+
 	/! main js
 	= render "application/javascript"

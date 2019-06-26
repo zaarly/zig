@@ -1,3 +1,19 @@
+html,
+body {
+	min-height: 100%;
+}
+
+main {
+	&.js-site-nav-active {
+		height: 100vh;
+		overflow: hidden;
+
+		@include bp(768) {
+			height: auto;
+		}
+	}
+}
+
 body {
 	font-family: sans-serif;
 }

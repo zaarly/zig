@@ -6,4 +6,6 @@
 
 * `rails server`
 
+* 'foreman start'
+
 This should run at localhost:3000. I couldn't figure out how to get the JS to work.

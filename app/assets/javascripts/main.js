@@ -1,37 +1,25 @@
-// // demo
-
-// // layout grid overlays
-// (function() {
-// 	const layoutGridOverlaySwitch = document.getElementById('layouts-grid-on-off');
-// 	const layouts = document.getElementById('layouts');
-// 	const addLayoutGridToggleListeners = () => {
-// 		layoutGridOverlaySwitch.addEventListener('change', () => {
-// 			layouts.classList.toggle('js-active');
-// 		});
-// 	}
-
-// 	addLayoutGridToggleListeners();
-// })();
-
 // site nav mobile toggle
 (function() {
-	const siteNavOpener = document.getElementById('site-nav-open');
-	const siteNavCloser = document.getElementById('site-nav-close');
+	const main = document.querySelector('main');
+	const siteNavOpener = document.getElementById('site-header-mobile-menu-opener');
+	const siteNavCloser = document.getElementById('site-nav-mobile-menu-closer');
 	const siteLayoutContainer = document.getElementById('site-layout');
 	const addMobileNavListener = (el) => {
 		if (el == siteNavCloser) {
 			el.addEventListener('click', () => {
 				siteNavOpener.setAttribute('aria-expanded', false);
 				siteNavCloser.setAttribute('aria-expanded', false);
-				siteNavOpener.enabled;
-				siteLayoutContainer.classList.remove('js-site-nav-active');
+				siteNavOpener.disabled = false;
+				siteNavCloser.disabled = true;
+				main.classList.remove('js-site-nav-active');
 			})
 		} else if (el == siteNavOpener) {
 			el.addEventListener('click', () => {
 				siteNavOpener.setAttribute('aria-expanded', true);
 				siteNavCloser.setAttribute('aria-expanded', true);
-				siteNavOpener.disabled;
-				siteLayoutContainer.classList.add('js-site-nav-active');
+				siteNavOpener.disabled = true;
+				siteNavCloser.disabled = false;
+				main.classList.add('js-site-nav-active');
 			})
 		}
 	};

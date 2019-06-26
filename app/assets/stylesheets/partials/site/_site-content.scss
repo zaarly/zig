@@ -1,7 +1,5 @@
+/* =============== Base =============== */
+
 .site-content {
 	padding: 1rem;
-
-	@include bp(768) {
-		grid-area: site-content
-	}
 }

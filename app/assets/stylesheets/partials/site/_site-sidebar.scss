@@ -1,7 +1,24 @@
+/* =============== Base =============== */
+
 .site-sidebar {
 	padding: 1rem;
+	transition: $transition-timing $transition-easing transform;
 
-	@include bp(768) {
-		grid-area: site-sidebar
+	@include bp(992) {
+		grid-area: site-sidebar;
+		min-height: 100vh;
+	}
+
+	// ~~~~ STATE - SITE NAV OPEN
+	.js-site-nav-active & {
+		transform: translateX(100%);
+
+		@include bp(768) {
+			transform: translateX(18.75rem);
+		}
+
+		@include bp(1200) {
+			transform: none;
+		}
 	}
 }

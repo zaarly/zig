@@ -1,20 +1,27 @@
+/* =============== Base =============== */
 .site-content-wrapper {
 	transition: $transition-timing $transition-easing transform;
+	min-height: 100vh;
 
-	@include bp(768) {
-		display: grid;
-		min-height: 100vh;
-		grid-template-columns: 1fr 18.75rem;
-		grid-template-rows: minmax(0, min-content) 1fr;
-		grid-template-areas: "site-header site-header""site-content site-sidebar";
+	@include bp(992) {
+		grid-area: site-content-wrapper;
 	}
 
-	// STATE - SITE NAV OPEN
+	@include bp(1200) {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	// ~~~~ STATE - SITE NAV OPEN
 	.js-site-nav-active & {
-		transform: translateX(100vw);
+		transform: translateX(100%);
 
 		@include bp(768) {
 			transform: translateX(18.75rem);
+		}
+
+		@include bp(1200) {
+			transform: none;
 		}
 	}
 }

@@ -1,0 +1,49 @@
+/* =============== Base =============== */
+
+.site-content-header {
+	padding: 1rem;
+
+
+	/* =============== Elements =============== */
+
+	// opener for mobile menu
+	&__mobile-menu-opener {
+		// __open is nested in the .site-header @include
+		position: absolute;
+		left: .5rem;
+		top: .5rem;
+		transition: $transition-timing opacity $transition-easing $transition-timing;
+
+		@include bp(1200) {
+			display: none;
+		}
+
+		// ~~~~ STATE - SITE NAV OPEN
+		.js-site-nav-active & {
+			opacity: 0;
+
+			@include bp(768) {
+				transition: none;
+			}
+		}
+	}
+
+	&__branding-wrapper {
+		text-align: center;
+
+		@include bp(1200) {
+			@include accessible-hide;
+		}
+	}
+
+	&__branding {
+		display: inline-block;
+		height: 2.5rem;
+
+		svg {
+			width: 100%;
+			max-width: 100px;
+			height: 100%;
+		}
+	}
+}

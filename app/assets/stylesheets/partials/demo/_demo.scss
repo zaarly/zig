@@ -4,15 +4,19 @@
 		background: #555;
 	}
 
-	&-content {
-		background: #fff;
+	&-content-wrapper {
+		background: #ddd;
 	}
 
-	&-header {
-		// background: $color-gray-dark;
+	&-content {
+		background: #eee;
+	}
+
+	&-content-header {
+		background: #999;
 	}
 
 	&-sidebar {
-		background: $color-gray-dark
+		background: #bbb
 	}
 }
