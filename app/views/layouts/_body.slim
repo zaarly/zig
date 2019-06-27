@@ -5,40 +5,84 @@ body.zig--v1
   		#site-layout.site-layout
   			/ SITE NAV
 			nav#site-nav.site-nav
-				header.site-nav__header
-					button#site-nav-mobile-menu-closer.site-nav__mobile-menu-closer.button.button--primary.button--icon.button--round[title="Close Main Menu" aria-controls="site-nav"]
-						span.accessible-hide Close Main Menu
-						svg[aria-hidden="true" role="img"]
-							use[xlink:href="#svg-close"]
-					.site-nav__branding-wrapper
-						a.site-nav__branding[href="#0"]
+				ul.site-nav__menus.unordered-list-reset
+					header.site-nav__menu-header
+						.site-nav__menu-header-branding-wrapper
+							h1.accessible-hide Main Menu
+							a.site-nav__menu-header-branding[href="#0" onclick="event.preventDefault()"]
+								span.accessible-hide Home
+								svg[aria-hidden="true" role="img"]
+									use[xlink:href="#svg-zaarly-logo"]
+						button#site-nav-mobile-menu-closer.site-nav__menu-header-closer.button.button--default-empty.button--icon.button--round[title="Close Main Menu" aria-controls="site-nav"]
+							span.accessible-hide Close Main Menu
 							svg[aria-hidden="true" role="img"]
-								use[xlink:href="#svg-zaarly-logo"]
-				h3 Site Navigation
-				ul
-					li Nav Item
-					li Nav Item
-					li Nav Item
-					li Nav Item
-					li Nav Item
-					li Nav Item
-					li Nav Item
+								use[xlink:href="#svg-close"]
+					li.site-nav__menu.site-nav__menu--partner
+						ul.unordered-list-reset
+							li.site-nav__menu-item.site-nav__menu-item--partner
+								span.accessible-hide
+								svg.avatar[aria-hidden="true" role="img"]
+									use[xlink:href="#svg-partner-logo"]
+								span
+									| Realtor Name at
+									br
+									| Realty Agency
+								button.button.button--icon.button--default-empty.button--round
+									span.accessible-hide Contact Your Realtor
+									svg[aria-hidden="true" role="img"]
+										use[xlink:href="#svg-airplane-send"]
+							/ li.site-nav__menu-item.site-nav__menu-item--search
+							/ 	a[href="" onclick="event.preventDefault()"]
+							/ 		span.accessible-hide Contact Your Realtor
+									
+					li.site-nav__menu.site-nav__menu--main
+						ul.unordered-list-reset
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Search for Services
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Projects
+							li.site-nav__menu-item.site-nav__menu-item--badge
+								a[href="" onclick="event.preventDefault()"]
+									| Messages
+									span.badge.badge--round 999
+					li.site-nav__menu.site-nav__menu--zaarly-info
+						ul.unordered-list-reset
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] How Zaarly Works
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Our Mission
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] FAQs
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Employee Handbook
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Jobs
+							li.site-nav__menu-item
+								a[href="" onclick="event.preventDefault()"] Our Policies
+					li.site-nav__menu.site-nav__menu--user
+						ul.unordered-list-reset
+							li.site-nav__menu-item.site-nav__menu-item--user
+								img.avatar[src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9" aria-hidden="true" alt=""]
+								span Webkit Wendy
+								button.button.button--icon.button--default-empty.button--round
+									span.accessible-hide User Settings
+									svg[aria-hidden="true" role="img"]
+										use[xlink:href="#svg-ellipsis-vertical"]
 
 			/ SITE CONTENT HEADER
 			.site-content-wrapper
 				header.site-content-header
-					button#site-header-mobile-menu-opener.site-content-header__mobile-menu-opener.button.button--primary.button--icon.button--round[title="Main Menu" aria-controls="site-nav"]
-						span.accessible-hide Main Menu
+					button#site-header-mobile-menu-opener.site-content-header__site-nav-opener.button.button--primary.button--icon.button--round[title="Main Menu" aria-controls="site-nav"]
+						span.accessible-hide Open Main Menu
 						svg[aria-hidden="true" role="img"]
 							use[xlink:href="#svg-hamburger"]
-					.site-content-header__branding-wrapper
-						a.site-content-header__branding[href="#0"]
+					.site-content-header__content-branding-wrapper
+						a.site-content-header__content-branding[href="#0" onclick="event.preventDefault()"]
+							span.accessible-hide Home
 							svg[aria-hidden="true" role="img"]
 								use[xlink:href="#svg-zaarly-logo"]
-					h1.site-content-header__h1 Pet-Friendly Cleaning Services
-					h2.site-content-header__h2 The best 3 Businesses for “Pet Friendly Cleaning”
-
-				/ SITE CONTENT INNER	
+					h1 Pet-Friendly Cleaning Services
+					h2 The best 3 Businesses for “Pet Friendly Cleaning”
 				section.site-content
 					h3 Site Content
 					p The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing), or other improvements to the property (i.e. garden work or garage maintenance/additions).
@@ -67,6 +111,7 @@ body.zig--v1
 					p Home or residential renovation is an almost $300 billion industry in the United States, The average cost per project is $3,000 in the United States and $11,000–15,000 in Canada.
 
 					p Professional home improvement is ancient and goes back to the beginning of recorded civilization. One example is Sergius Orata, who in the 1st century B.C. is said by the writer Vitruvius (in his famous book De architectura) to have invented the hypocaust. The hypocaust is an underfloor heating system that was used throughout the Roman empire in villas of the wealthy. He is said to have become wealthy himself by buying villas at a low price, adding spas and his newly invented hypocaust, and reselling them at higher prices.
+
 			/ SITE SIDEBAR
 			aside.site-sidebar
 				div
@@ -85,8 +130,6 @@ body.zig--v1
 					p The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing), or other improvements to the property (i.e. garden work or garage maintenance/additions).
 
 					p While "home improvement" often refers to building projects that alter the structure of an existing home, it can also include improvements to lawns, gardens, and outdoor structures, such as gazebos and garages.  It also encompasses maintenance, repair, and general servicing tasks. Home improvement projects generally have one or more of the following goals:
-			/ SITE CONTENT WRAPPER
-			/ section.site-content-wrapper
 
 	/! main js
 	= render "application/javascript"

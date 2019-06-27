@@ -4,10 +4,10 @@
 	padding: 1rem;
 
 
-	/* =============== Elements =============== */
+	/* ------------- Elements ------------- */
 
-	// opener for mobile menu
-	&__mobile-menu-opener {
+	// opener for site nav
+	&__site-nav-opener {
 		// __open is nested in the .site-header @include
 		position: absolute;
 		left: .5rem;
@@ -28,7 +28,7 @@
 		}
 	}
 
-	&__branding-wrapper {
+	&__content-branding-wrapper {
 		text-align: center;
 
 		@include bp(1200) {
@@ -36,8 +36,7 @@
 		}
 	}
 
-	&__branding {
-		display: inline-block;
+	&__content-branding {
 		height: 2.5rem;
 
 		svg {

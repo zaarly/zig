@@ -1,0 +1,51 @@
+.button {
+	padding: .5rem 2rem;
+	display: none;
+
+	&--primary {
+		background: $color-primary-green;
+		fill: $color-base-white;
+	}
+
+	&--default-empty {
+		background: transparent;
+		color: inherit;
+		fill: inherit;
+	}
+
+	&--default-light {
+		background: $color-base-lighten-25;
+	}
+
+	&--icon {
+		display: flex;
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+
+		svg {
+			margin: auto;
+			width: 50%;
+			height: 50%;
+		}
+	}
+
+	&--round {
+		border-radius: 99em;
+	}
+}
+
+.badge {
+	display: inline-block;
+	font-size: 0.75rem;
+	padding: 0 1rem;
+	text-align: center;
+	font-weight: $font-weight-button;
+	color: $color-primary-green;
+	line-height: $line-height-button;
+	background: $color-base-white;
+
+	&--round {
+		border-radius: 99em;
+	}
+}

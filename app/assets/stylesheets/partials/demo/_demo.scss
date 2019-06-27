@@ -1,22 +1,19 @@
 // site
 .site {
-	&-nav {
-		background: #555;
-	}
 
 	&-content-wrapper {
-		background: #ddd;
+		background: #aaa;
 	}
 
 	&-content {
-		background: #eee;
+		background: #ddd;
 	}
 
 	&-content-header {
-		background: #999;
+		background: #eee;
 	}
 
 	&-sidebar {
-		background: #bbb
+		background: #ccc
 	}
 }

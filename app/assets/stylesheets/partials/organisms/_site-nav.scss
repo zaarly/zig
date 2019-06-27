@@ -1,0 +1,176 @@
+/* =============== Base =============== */
+
+.site-nav {
+	background: $color-primary-green;
+	padding: 1rem 0 0;
+	color: $color-base-white;
+
+
+	/* ------------- Elements ------------- */
+	&__menu-header-branding-wrapper {
+		text-align: left;
+		padding: 0 1rem;
+
+		@include bp(768) {
+			padding: .5rem 2rem;
+		}
+	}
+
+	&__menu-header-branding {
+		display: inline-block;
+		height: 2rem;
+
+		svg {
+			width: 100%;
+			max-width: 100px;
+			height: 100%;
+			fill: $color-base-white;
+		}
+	}
+
+	// menu closer button
+	&__menu-header-closer {
+		opacity: 0;
+		position: absolute;
+		right: 1rem;
+		top: .5rem;
+
+		@include bp(768) {
+			top: 1rem;
+			right: 2rem;
+		}
+
+		@include bp(1200) {
+			display: none;
+		}
+
+		svg {
+			fill: $color-base-white;
+		}
+
+		// ~~~~ STATE - SITE NAV OPEN
+		.js-site-nav-active & {
+			transition: $transition-timing opacity $transition-easing $transition-timing;
+			opacity: .5;
+		}
+	}
+
+	&__menus {
+		display: flex;
+		flex-flow: column nowrap;
+		height: 100%;
+	}
+
+
+	&__menu {
+		padding: 1rem 0;
+		font-family: $font-family-button;
+		font-weight: $font-weight-button;
+		border-bottom: $color-base-lighten-10 0.125rem solid;
+
+		/* __________ Modifiers __________ */
+
+		&--zaarly-info {
+			display: none;
+
+			@include bp(768) {
+				border: none;
+				display: block;
+				margin-bottom: 0;
+				margin-top: auto;
+			}
+		}
+
+		&--user {
+			padding: 0;
+			margin-top: auto;
+			border: none;
+
+			@include bp(768) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__menu-item {
+		a {
+			padding: .5rem 1rem;
+			font-family: $font-family-button;
+			font-weight: $font-weight-button;
+			width: 100%;
+
+			@include bp(768) {
+				padding: .5rem 2rem;
+			}
+		}
+
+		/* __________ Modifiers __________ */
+		&--partner {
+			padding: .5rem 1rem;
+			display: flex;
+			flex-flow: row nowrap;
+
+			@include bp(768) {
+				padding: .5rem 2rem;
+			}
+
+			.avatar {
+				width: 2rem;
+				height: 2rem;
+				margin-right: .5rem;
+				fill: $color-base-white;
+			}
+
+			span {
+				flex-grow: 1;
+				font-weight: $font-weight-body;
+			}
+
+			.button--default-empty {
+				opacity: .5;
+				fill: $color-base-white;
+			}
+		}
+
+		&--badge {
+			a {
+				display: flex;
+				flex-flow: row nowrap;
+				height: 100%;
+			}
+
+			.badge {
+				display: flex;
+				align-items: center;
+				margin-left: auto;
+				background: $color-secondary-green;
+				color: $color-base-white;
+			}
+		}
+
+		&--user {
+			display: flex;
+			padding-right: 1rem;
+			flex-flow: row nowrap;
+			align-items: center;
+			background: $color-secondary-green;
+
+			@include bp(768) {
+				padding-right: 2rem;
+			}
+
+			.avatar {
+				display: block;
+				width: 4rem;
+				height: 4rem;
+				margin-right: 1rem;
+			}
+
+			.button--default-empty {
+				opacity: .5;
+				margin-left: auto;
+				fill: $color-base-white;
+			}
+		}
+	}
+}

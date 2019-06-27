@@ -1,0 +1,44 @@
+// for scrolling interactivity with mobile menu
+main {
+
+	// ~~~~ STATE - SITE NAV OPEN
+	&.js-site-nav-active {
+		height: 100vh;
+		overflow: hidden;
+
+		@include bp(768) {
+			height: auto;
+		}
+	}
+}
+
+
+/* =============== Base =============== */
+.site-layout {
+
+	// standard layout – no modifier
+	@include bp(992) {
+		display: grid;
+		grid-template-columns: 1fr 18.75rem;
+		grid-template-areas: "site-content-wrapper site-sidebar"
+	}
+
+	@include bp(1200) {
+		grid-template-columns: 18.75rem 1fr 18.75rem;
+		grid-template-areas: "site-nav site-content-wrapper site-sidebar"
+	}
+
+	/* __________ Modifiers __________ */
+	&--extended-sidebar {
+		@include bp(992) {
+			display: grid;
+			grid-template-columns: 1fr 37.5rem;
+			grid-template-areas: "site-content-wrapper site-sidebar"
+		}
+
+		@include bp(1200) {
+			grid-template-columns: 18.75rem 1fr 31.25rem;
+			grid-template-areas: "site-nav site-content-wrapper site-sidebar"
+		}
+	}
+}

@@ -10,14 +10,19 @@ ZIG
 @import "partials/global/normalize";
 @import "partials/global/resets";
 @import "partials/global/helper-classes";
+@import "partials/global/typography";
+@import "partials/global/atoms";
 
 // site layouts
-@import "partials/site/site-layouts";
-@import "partials/site/site-nav";
-@import "partials/site/site-content-wrapper";
-@import "partials/site/site-content";
-@import "partials/site/site-content-header";
-@import "partials/site/site-sidebar";
+@import "partials/layouts/site-layouts";
+@import "partials/layouts/site-nav";
+@import "partials/layouts/site-content-wrapper";
+@import "partials/layouts/site-content";
+@import "partials/layouts/site-content-header";
+@import "partials/layouts/site-sidebar";
+
+// organisms
+@import "partials/organisms/site-nav";
 
 // demo only
 @import "partials/demo/demo";

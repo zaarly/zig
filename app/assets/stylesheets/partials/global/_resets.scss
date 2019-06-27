@@ -3,19 +3,15 @@ body {
 	min-height: 100%;
 }
 
-main {
-	&.js-site-nav-active {
-		height: 100vh;
-		overflow: hidden;
-
-		@include bp(768) {
-			height: auto;
-		}
-	}
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
 }
 
-body {
-	font-family: sans-serif;
+img {
+	max-width: 100%;
+	display: inline-block;
 }
 
 button {
@@ -23,6 +19,7 @@ button {
 	border: none;
 	display: inline-block;
 	background: transparent;
+	cursor: pointer;
 }
 
 svg {

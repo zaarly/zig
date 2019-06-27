@@ -8,27 +8,8 @@
 	clip: rect(1px, 1px, 1px, 1px)
 }
 
-.button {
-	padding: .5rem 2rem;
-
-	&--primary {
-		background: $color-gray-darker;
-	}
-
-	&--icon {
-		display: flex;
-		width: 3rem;
-		height: 3rem;
-		padding: 0;
-
-		svg {
-			margin: auto;
-			width: 50%;
-			height: 50%;
-		}
-	}
-
-	&--round {
-		border-radius: 99em;
-	}
+.unordered-list-reset {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
 }
